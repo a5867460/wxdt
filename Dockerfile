@@ -4,8 +4,9 @@ ENV TZ=Asia/Shanghai
 
 RUN /wxdt/wechat_web_devtools/bin/update_package_nw.sh
 
-WORKDIR /wxdt/wechat_web_devtools
-
 COPY prepare.sh /tmp/
+
+RUN cd /tmp \
+    && chmod +x ./prepare.sh
 
 ENTRYPOINT ['/tmp/prepare.sh']
