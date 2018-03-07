@@ -2,6 +2,6 @@ FROM busang/wine
 
 ENV TZ=Asia/Shanghai
 
-RUN /wxdt/wechat_web_devtools/bin/update_package_nw.s \
+RUN /wxdt/wechat_web_devtools/bin/update_package_nw.sh \
 
 WORKDIR /wxdt/wechat_web_devtools
