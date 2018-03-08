@@ -1,4 +1,4 @@
-FROM busang/wine
+FROM busang/wine:tmp
 
 ENV TZ=Asia/Shanghai
 
@@ -9,3 +9,5 @@ RUN /wxdt/wechat_web_devtools/bin/update_package_nw.sh && \
 
 RUN cd /tmp \
     && chmod +x ./prepare.sh
+
+ENTRYPOINT ["/wxdt/wechat_web_devtools/bin/wxdt"]
